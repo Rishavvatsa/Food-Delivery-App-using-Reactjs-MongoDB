@@ -8,7 +8,7 @@ import Cart from "./Pages/Cart";
 import { AnimatePresence } from "framer-motion";
 import Menu from "./Pages/Menu";
 import About from "./Pages/About";
-import Services from "./Pages/Services";
+import Contact from "./Pages/Contact";
 import SignUp from "./Pages/SignUp";
 import Login from "./Pages/login";
 
@@ -45,7 +45,7 @@ const App = () => {
             <Route path="newproduct" element={<Addcontainer />} />
             <Route path="menu/:filterby" element={<Menu />} />
             <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
+            <Route path="/contact" element={<Contact/>} />
             <Route path="/signup" element={<SignUp/>} />
             <Route path="/login" element={<Login/>}/>
             <Route path="/cart" element={<Cart/>} />

@@ -1,0 +1,95 @@
+
+
+.contact-us-container {
+    padding: 2rem;
+  }
+  
+  .contact-us-container h1 {
+    font-size: 36px;
+    color: #198754;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    font-size: 18px;
+    color: #333;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+  }
+  
+  button[type="submit"] {
+    background-color: #198754;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #417078;
+  }
+  
+  .contact-info {
+    margin-top: 2rem;
+  }
+  
+  .contact-info h2 {
+    font-size: 24px;
+    color: #198754;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-info p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-info ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contact-info li {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact-info i {
+    margin-right: 0.5rem;
+    color: #198754;
+  }
+  
+  /* Font Awesome Icons */
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+  
