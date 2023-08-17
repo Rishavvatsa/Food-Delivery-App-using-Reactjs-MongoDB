@@ -3,7 +3,7 @@ import { toast } from "react-hot-toast";
 
 const initialState = {
   productList: [],
-  cartItem: [],
+  cartItem: JSON.parse(localStorage.getItem("cart"))|| []
 };
 
 export const productSlice = createSlice({
@@ -24,6 +24,8 @@ export const productSlice = createSlice({
           ...state.cartItem,
           { ...action.payload, qty: 1, total: total },
         ];
+        localStorage.setItem("cart", JSON.stringify(state.cartItem));
+
       }
     },
     deleteCartItem: (state, action) => {
