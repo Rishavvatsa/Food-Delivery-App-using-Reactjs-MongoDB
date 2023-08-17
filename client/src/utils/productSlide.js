@@ -3,7 +3,7 @@ import { toast } from "react-hot-toast";
 
 const initialState = {
   productList: [],
-  cartItem: JSON.parse(localStorage.getItem("cart"))|| []
+  cartItem: JSON.parse(localStorage.getItem("cart")) || [],
 };
 
 export const productSlice = createSlice({
@@ -25,13 +25,14 @@ export const productSlice = createSlice({
           { ...action.payload, qty: 1, total: total },
         ];
         localStorage.setItem("cart", JSON.stringify(state.cartItem));
-
       }
     },
+    
     deleteCartItem: (state, action) => {
       toast("one Item Delete");
       const index = state.cartItem.findIndex((el) => el._id === action.payload);
       state.cartItem.splice(index, 1);
+      localStorage.setItem("cart", JSON.stringify(state.cartItem));
       console.log(index);
     },
     increaseQty: (state, action) => {
@@ -67,6 +68,7 @@ export const {
   deleteCartItem,
   increaseQty,
   decreaseQty,
+  clearCart
 } = productSlice.actions;
 
 export default productSlice.reducer;
