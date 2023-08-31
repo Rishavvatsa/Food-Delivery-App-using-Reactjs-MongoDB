@@ -27,6 +27,11 @@ export const productSlice = createSlice({
         localStorage.setItem("cart", JSON.stringify(state.cartItem));
       }
     },
+    clearCart: (state,action) => {
+      state.cartItem=[];
+      localStorage.setItem("cartItem",JSON.stringify(state.cartItem));
+      toast.error("Cart Cleared")
+    },
     
     deleteCartItem: (state, action) => {
       toast("one Item Delete");
