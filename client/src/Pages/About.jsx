@@ -6,14 +6,20 @@ const About = () => {
     return (
         <div className="about-section">
            
-            <div className="about">
-                <div className="about-text">
-                    <h1>About Us</h1>
-                    <p>Our food delivery app is revolutionizing the way you experience food. With a vast selection of mouthwatering dishes from local restaurants, we bring the culinary world to your fingertips. From the comfort of your own home, you can explore diverse cuisines, read reviews, and make informed choices that cater to your unique preferences. With our seamless ordering process and efficient delivery service, we ensure that your meals arrive fresh and on time, allowing you to indulge in the flavors you love without the hassle. Join us on this gastronomic adventure and discover a new level of convenience, variety, and culinary satisfaction.</p>
-                </div>
-                <div className="about-img">
-                    <img src={about_img} alt="" />
-                </div>
+           <div className="about-container">
+      <div className="about-left">
+        <h1>
+          Welcome to <br /> The world of <br /> <span>BiteBazaar</span>
+        </h1>
+        <h4>
+          "Say Namaste to Delicious Meals with <span>BiteBazaar</span>"
+        </h4>
+      </div>
+      <div className="about-right">
+        <img src={about_img} alt="Food Imag"/>
+      </div>
+    </div>
+                
               <div className="about-delivery-img">
                 <p>Free Delivery </p>
                 <img src={delivery_img} width='200px' alt="" />
@@ -21,7 +27,7 @@ const About = () => {
               </div>
             </div>
            
-        </div>
+        
     )
 }
 

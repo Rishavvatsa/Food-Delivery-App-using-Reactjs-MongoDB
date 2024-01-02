@@ -2,11 +2,10 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../images/img/logo.png";
 import { HiOutlineUserCircle } from "react-icons/hi";
-import { BsCartFill } from "react-icons/bs";
-import { useDispatch, useSelector } from "react-redux";
+import { GiShoppingCart } from "react-icons/gi";import { useDispatch, useSelector } from "react-redux";
 import { logoutRedux } from "../utils/userslice";
 import { toast } from "react-hot-toast";
-
+import "../images/style.css"
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const userData = useSelector((state) => state.user);
@@ -23,24 +22,24 @@ const Header = () => {
   const cartItemNumber = useSelector((state) => state.product.cartItem);
 
   return (
-    <header className="fixed shadow-md w-full h-16 px-2 md:px-4 z-50 bg-white">
+    <header className="fixed shadow-md w-full h-16 px-2 md:px-4 z-50 bg-white ">
       {/* desktop */}
 
-      <div className="flex items-center h-full justify-between">
-      <Link to={"/"} className="flex items-center  gap-2">
+      <div className="flex items-center h-full justify-between nav">
+        <Link to={"/"} className="flex items-center  gap-2 ">
           <img src={logo} className="w-8 object-cover" alt="logo" />
           <p className="text-headingColor text-xl font-bold">BiteBazaar</p>
         </Link>
         <div className="flex items-center gap-4 md:gap-7">
           <nav className="gap-4 md:gap-6 text-base md:text-lg hidden md:flex">
-            <Link to={""}>Home</Link>
-            <Link to={"menu/64cbcd29d28623ffce0bb3e3"}>Menu</Link>
-            <Link to={"about"}>About</Link>
-            <Link to={"contact"}>Contact</Link>
+            <Link to={""} className="nav-link">Home</Link>
+            <Link to={"menu/64cbcd29d28623ffce0bb3e3"} className="nav-link">Menu</Link>
+            <Link to={"about"} className="nav-link">About</Link>
+            <Link to={"contact"} className="nav-link">Contact</Link>
           </nav>
           <div className="text-2xl text-slate-600 relative">
             <Link to={"cart"}>
-              <BsCartFill />
+             <GiShoppingCart />
               <div className="absolute -top-1 -right-1 text-white bg-red-500 h-4 w-4 rounded-full m-0 p-0 text-sm text-center ">
                 {cartItemNumber.length}
               </div>
@@ -59,7 +58,7 @@ const Header = () => {
                 {userData.email === "rishavvatsa62033@gmail.com" && (
                   <Link
                     to={"newproduct"}
-                    className="whitespace-nowrap cursor-pointer px-2 pb-2 hover:bg-purple-200"
+                    className="whitespace-nowrap cursor-pointer px-2 pb-2 hover:bg-purple-200 nav-link"
                   >
                     Add product
                   </Link>
@@ -70,7 +69,7 @@ const Header = () => {
                     className="cursor-pointer text-white px-2 bg-red-500"
                     onClick={handleLogout}
                   >
-                    Logout 
+                    Logout
                   </p>
                 ) : (
                   <Link
@@ -107,6 +106,5 @@ const Header = () => {
     </header>
   );
 };
-
 
 export default Header;

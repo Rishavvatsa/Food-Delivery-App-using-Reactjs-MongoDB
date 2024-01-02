@@ -10,6 +10,10 @@ body {
     BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
     "Open Sans", "Helvetica Neue", sans-serif;
 }
+body .dark {
+  background-color: #333333;
+  color: #ffffff;
+}
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -17,3 +21,85 @@ html {
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+/* About us page CSS Start */
+.about-profile-container {
+  margin: 100px auto 0px;
+  text-align: center;
+}
+
+.about-profile-button {
+  background-color: var(--orange);
+  color: var(--light-white-text);
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: large;
+  font-weight: bold;
+}
+
+.about-profile-button:hover {
+  background-color: var(--dark-green);
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 75px auto 0px;
+  justify-content: center;
+  align-items: center;
+  height: 72vh;
+}
+.about-container .about-left {
+  padding-left: 10px;
+  overflow-y: hidden;
+}
+.about-container .about-left h1 {
+  font-size: 70px;
+  color: var(--light-text-color);
+}
+.about-container .about-left h1 span {
+  background-color: var(--orange);
+  padding: 0 10px;
+  border-radius: 15px;
+  color: var(--light-white-text);
+}
+.about-container .about-left h4 {
+  font-size: 25px;
+  padding-top: 10px;
+  font-style: italic;
+  color: var(--light-text-color);
+}
+.about-container .about-left h4 span {
+  color: var(--dark-orange);
+}
+.about-container .about-right {
+  padding-left: 20px;
+  overflow-y: hidden;
+}
+.about-container .about-right img {
+  border-radius: 50%;
+  width: 500px;
+  padding-right: 70px;
+}
+
+@layer utilities {
+  .duration-high {
+    @apply transition-all duration-300 ease-in-out;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.spin {
+  animation: spin 40s linear infinite;
+}
+
+/* About us page CSS End */

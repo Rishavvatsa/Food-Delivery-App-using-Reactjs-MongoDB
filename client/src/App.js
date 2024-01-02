@@ -22,6 +22,8 @@ import { Toaster } from "react-hot-toast";
 import Addcontainer from "./Pages/Addcontainer";
 import Cancel from "./Pages/cancel";
 import Success from "./Pages/success";
+
+import Hero from "./Components/Hero";
 const App = () => {
   const dispatch = useDispatch()
   const productData = useSelector((state)=>state.product)
@@ -41,7 +43,7 @@ const App = () => {
         <Toaster/>
          <main className="mt-14 md:mt-20 md: px-16 py-4 w-full ">
           <Routes>
-            <Route path="/" element={<MainContainer />} />
+            <Route path="/" element={<MainContainer/>} />
             <Route path="newproduct" element={<Addcontainer />} />
             <Route path="menu/:filterby" element={<Menu />} />
             <Route path="/about" element={<About />} />
