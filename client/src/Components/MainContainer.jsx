@@ -7,6 +7,7 @@ import Cardcontainer from "./Cardcontainer";
 
 import Hero from "./Hero";
 import Footer from "./Footer";
+import HowitWork from "../Pages/Iconsection";
 const MainContainer = () => {
   const productData = useSelector((state) => state.product.productList);
 
@@ -28,6 +29,7 @@ const MainContainer = () => {
   return (
     <div className="p-2 md:p-4 ">
       <Hero />
+      <HowitWork/>
       <div>
         <div className="flex w-full items-center">
           <h2 className="font-bold text-2xl text-slate-800 mb-4">
