@@ -4,7 +4,6 @@ import { useSelector } from "react-redux";
 import CardFeature from "./CardFeature";
 import { GrPrevious, GrNext } from "react-icons/gr";
 import Cardcontainer from "./Cardcontainer";
-
 import Hero from "./Hero";
 import Footer from "./Footer";
 import HowitWork from "../Pages/Iconsection";
@@ -27,10 +26,10 @@ const MainContainer = () => {
   };
 
   return (
-    <div className="p-2 md:p-4 ">
+    <div class="p-2 md:p-4 ">
       <Hero />
-      <HowitWork/>
-      <div>
+      <HowitWork />
+      <div className="">
         <div className="flex w-full items-center">
           <h2 className="font-bold text-2xl text-slate-800 mb-4">
             Fresh Vegetables
@@ -51,7 +50,7 @@ const MainContainer = () => {
           </div>
         </div>
         <div
-          className="flex gap-5 overflow-scroll scrollbar-none scroll-smooth transition-all"
+          className="flex gap-5 overflow-scroll scrollbar-none scroll-smooth transition-all "
           ref={slideProductRef}
         >
           {homeProductCartListVegetables[0]
@@ -72,9 +71,9 @@ const MainContainer = () => {
               ))}
         </div>
       </div>
-
+                <Cardcontainer heading={"Your Products"}/>
      
-      <Footer />
+    
     </div>
   );
 };

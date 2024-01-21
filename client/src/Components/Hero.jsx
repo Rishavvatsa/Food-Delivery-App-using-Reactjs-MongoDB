@@ -51,15 +51,15 @@ const Hero = () => {
   return (
     <>
       <div
-        className="min-h-[550px] sm:min-h-[600px] bg-gray-100 flex justify-center items-center dark:bg-gray-950 dark:text-white duration-200  border rounded-2xl shadow-2xl"
+        className="min-h-[550px] sm:min-h-[600px] bg-gray-100 flex justify-center items-center duration-200 border rounded-2xl shadow-2xl sm:min-w-full sm:max-w-[500px]"
         style={bgImage}
       >
         <div className="container pb-8 sm:pb-0">
-          <div className="flex gap-3 bg-orange-300 w-36 px-2 items-center rounded-full">
+          <div className="flex gap-3 bg-orange-300 w-36 px-2  mt-2 items-center rounded-full">
             <p className="text-sm font-medium text-slate-900">Bike Delivery</p>
             <img src={logo} className="h-7 rounded-md" alt="bike delivery" />
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2">
+          <div className="grid grid-cols-1 md:grid-cols-2">
             {/* text content section */}
             <div
               data-aos="zoom-out"
@@ -94,7 +94,7 @@ const Hero = () => {
                   className="w-[300px] sm:w-[450px] sm:scale-125  mx-auto spin "
                 />
               </div>
-              <div className="flex lg:flex-col lg:top-1/2 lg:-translate-y-1/2 lg:py-2 justify-center gap-4 absolute bottom-[0px] lg:-right-10 bg-white/30 rounded-full">
+              <div className="flex lg:flex-col lg:top-1/2 lg:-translate-y-1/2 lg:py-2 justify-center gap-4 absolute bottom-[0px] lg:-right-10 bg-white/70 border-1 rounded-full drop-shadow-2xl">
                 {ImageList.map((item, index) => (
                   <img
                     key={item.id}

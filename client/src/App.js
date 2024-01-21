@@ -1,6 +1,4 @@
 import React,{useEffect} from "react";
-import "./App.css";
-import "./index.css";
 import { Header } from "./Components";
 import { Outlet, Route, Routes } from "react-router-dom";
 import MainContainer from "./Components/MainContainer";
@@ -24,6 +22,7 @@ import Cancel from "./Pages/cancel";
 import Success from "./Pages/success";
 
 import Hero from "./Components/Hero";
+import LOG from "./Pages/LOG";
 const App = () => {
   const dispatch = useDispatch()
   const productData = useSelector((state)=>state.product)
@@ -38,10 +37,10 @@ const App = () => {
 
   return (
     <AnimatePresence mode="wait">
-      <div className="w-screen h-auto flex flex-col bg-slate-200 fs-1 ">
+      <div className="h-auto flex flex-col bg-slate-200 fs-1 max-w-full  ">
         <Header />
         <Toaster/>
-         <main className="mt-14 md:mt-20 md: px-16 py-4 w-full ">
+         <main className="mt-14 md:mt-20 md: px-16 py-2 w-full ">
           <Routes>
             <Route path="/" element={<MainContainer/>} />
             <Route path="newproduct" element={<Addcontainer />} />
@@ -49,6 +48,7 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact/>} />
             <Route path="/signup" element={<SignUp/>} />
+            <Route path="/logins" element={<LOG/>}/>
             <Route path="/login" element={<Login/>}/>
             <Route path="/cart" element={<Cart/>} />
             <Route path="/success" element={<Success/>}/>
