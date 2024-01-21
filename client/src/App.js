@@ -22,7 +22,7 @@ import Cancel from "./Pages/cancel";
 import Success from "./Pages/success";
 
 import Hero from "./Components/Hero";
-import LOG from "./Pages/LOG";
+
 const App = () => {
   const dispatch = useDispatch()
   const productData = useSelector((state)=>state.product)
@@ -48,7 +48,6 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact/>} />
             <Route path="/signup" element={<SignUp/>} />
-            <Route path="/logins" element={<LOG/>}/>
             <Route path="/login" element={<Login/>}/>
             <Route path="/cart" element={<Cart/>} />
             <Route path="/success" element={<Success/>}/>
